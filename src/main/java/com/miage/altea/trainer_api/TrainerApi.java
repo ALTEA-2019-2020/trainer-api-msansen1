@@ -1,0 +1,13 @@
+package com.miage.altea.trainer_api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TrainerApi {
+
+    public static void main(String... args){
+        SpringApplication.run(TrainerApi.class, args);
+    }
+
+}
