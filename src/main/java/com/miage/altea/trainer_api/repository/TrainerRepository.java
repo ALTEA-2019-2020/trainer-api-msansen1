@@ -8,6 +8,4 @@ import java.util.Optional;
 public interface TrainerRepository extends CrudRepository<Trainer, String> {
 
     Optional<Trainer> findById(String id);
-
-    //Object save(Trainer trainer);
 }
