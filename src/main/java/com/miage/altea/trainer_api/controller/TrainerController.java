@@ -2,10 +2,7 @@ package com.miage.altea.trainer_api.controller;
 
 import com.miage.altea.trainer_api.bo.Trainer;
 import com.miage.altea.trainer_api.service.TrainerService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -25,6 +22,17 @@ public class TrainerController {
         return trainerService.getAllTrainers();
     }
 
+    @PostMapping("/")
+    String updateTrainer(@RequestBody Trainer trainer){
+        trainerService.updateTrainer(trainer);
+        return trainer.toString();
+    }
+
+    @DeleteMapping("/{name}")
+    String deleteTrainer(@PathVariable String name){
+        trainerService.deleteTrainer(name);
+        return name + " Deleted";
+    }
 
     @GetMapping("/{name}")
     Optional<Trainer> getTrainer(@PathVariable String name){

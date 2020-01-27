@@ -9,4 +9,9 @@ public interface TrainerService {
     Iterable<Trainer> getAllTrainers();
     Optional<Trainer> getTrainer(String name);
     Trainer createTrainer(Trainer trainer);
+
+    Trainer updateTrainer(Trainer trainer);
+
+    void deleteTrainer(String trainerName);
+
 }
