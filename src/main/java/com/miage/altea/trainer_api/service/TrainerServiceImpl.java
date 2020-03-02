@@ -2,11 +2,13 @@ package com.miage.altea.trainer_api.service;
 
 import com.miage.altea.trainer_api.bo.Trainer;
 import com.miage.altea.trainer_api.repository.TrainerRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Qualifier("trainerApiRestTemplate")
 public class TrainerServiceImpl implements TrainerService {
 
     private TrainerRepository trainerRepository;
