@@ -22,10 +22,14 @@ public class TrainerController {
         return trainerService.getAllTrainers();
     }
 
-    @PostMapping("/")
-    String updateTrainer(@RequestBody Trainer trainer){
-        trainerService.updateTrainer(trainer);
-        return trainer.toString();
+    @PostMapping(value = "/")
+    public Trainer createTrainer(@RequestBody Trainer trainer) {
+        return trainerService.createTrainer(trainer);
+    }
+
+    @PutMapping(value = "/")
+    public Trainer updateTrainer(@RequestBody Trainer trainer) {
+        return trainerService.updateTrainer(trainer);
     }
 
     @DeleteMapping("/{name}")
