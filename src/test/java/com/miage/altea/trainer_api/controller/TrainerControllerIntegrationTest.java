@@ -26,10 +26,10 @@ class TrainerControllerIntegrationTest {
     @Autowired
     private TrainerController controller;
 
-    @Value("${spring.security.user.name}")
+    @Value("user")
     private String username;
 
-    @Value("${spring.security.user.password}")
+    @Value("3563cd85-9088-41c7-8569-5e3fa3849005")
     private String password;
 
     @Test

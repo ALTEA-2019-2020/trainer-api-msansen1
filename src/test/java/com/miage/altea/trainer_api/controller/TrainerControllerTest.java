@@ -100,4 +100,16 @@ class TrainerControllerTest {
 
         assertNotNull(pathVariableAnnotation);
     }
+
+    @Test
+    void createTrainer_shouldBeAnnotated() throws NoSuchMethodException {
+        var createTrainer =
+                TrainerController.class.getDeclaredMethod("createTrainer", Trainer.class);
+        var CreateTrainer = createTrainer.getAnnotation(PostMapping.class);
+
+        var requestBodyAnnotation = createTrainer.getParameters()[0].getAnnotation(RequestBody.class);
+
+        assertNotNull(CreateTrainer);
+        assertNotNull(requestBodyAnnotation);
+    }
 }
