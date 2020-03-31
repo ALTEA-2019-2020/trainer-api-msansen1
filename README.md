@@ -8,7 +8,7 @@ An api used as a microservice for the project [Pokemon GameUI](https://github.co
 
 using an addOn for postgresSQL  
 
-#Configuration necessaire au lancement :  
+# Configuration necessaire au lancement :  
 
 |  Variable | Description  |
 |:-:|:-:|
@@ -20,11 +20,11 @@ using an addOn for postgresSQL
 | SPRING_USERNAME | Basic Auth connection Username |
 | SPRING_PASSWORD | Basic Auth Password |
 
-#API disponibles  
+# API disponibles  
 [Swagger url](https://trainer-type-msn.herokuapp.com/swagger-ui.html)  
 [JSON api-docs](https://trainer-type-msn.herokuapp.com/v2/api-docs)
 
-##TrainerController:  
+## TrainerController:  
 	{GET /trainers/{name}}: getTrainer(String)  
 	{GET /trainers/}: getAllTrainers()  
 	{POST /trainers/}: createTrainer(Trainer)  
