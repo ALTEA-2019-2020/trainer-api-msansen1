@@ -20,10 +20,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //super.configure(http);
         http.csrf().disable();
         http.authorizeRequests().
                 antMatchers(AUTH_WHITELIST).permitAll().  // whitelist Swagger UI resources
                 antMatchers("/**").authenticated();  // require authentication for any endpoint that's not whitelisted
+        super.configure(http);
     }
 }
